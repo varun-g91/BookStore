@@ -1,0 +1,18 @@
+{
+
+	"Async callback function": {
+		"scope": "javascript,typescript",
+		"prefix": "asyncCB",
+		"body": [
+			"async (request, response) => {",
+				"try {",
+					"$1",
+				"} catch (error) {",
+					"$2",
+				"}",
+			"}",
+			
+		],
+		"description": "Asynchronous callBack function"
+	}
+}
