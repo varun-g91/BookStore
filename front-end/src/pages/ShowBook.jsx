@@ -48,11 +48,11 @@ const ShowBook = () => {
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Create Time</span>
-            <span>{new Date(book.createdAt).toDateString()}</span> 
+            <span>{new Date(book.createdAt).toString()}</span> 
           </div>
           <div className='my-4'>
             <span className='text-xl mr-4 text-gray-500'>Update Time</span>
-            <span>{new Date(book.updatedAt).toDateString()}</span> 
+            <span>{new Date(book.updatedAt).toString()}</span> 
           </div>
         </div>
        )}
