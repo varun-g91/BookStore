@@ -21,13 +21,7 @@ app.get('/', (request, response) => {
 app.use(cors());
 
 //Option 2: Allow only custom origins
-app.use(
-    cors({
-        origin: 'http://localhost:3000',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-)
+
 
 app.use('/books', booksRoute);
 
