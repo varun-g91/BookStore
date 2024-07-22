@@ -6,12 +6,12 @@ import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import BooksTable from "../components/home/BooksTable";
 import BooksCard from '../components/home/BooksCard';
 import { useShowType } from '../components/ShowTypeContext';
+import Navbar from '../components/home/Navbar';
 
 
-const Home = () => {
+const Home = ({showType, setShowType}) => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const { showType, setShowType } = useShowType();
 
   useEffect(() => {
     setLoading(true);
@@ -27,25 +27,11 @@ const Home = () => {
       });
   }, []);
   return (
-    <div className='p-4'>
-      <div className='flex justify-center items-center gap-x-4'>
-        <button
-          className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-md'
-          onClick={() => setShowType('table')}
-        >
-          Table
-        </button>
-        <button
-          className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-md'
-          onClick={() => setShowType('card')}
-        >
-          Card
-        </button>
-      </div>
+    <div className='p-4 bg-[#FFF1DB] min-h-screen m-0 border-t-0 border-8 border-spacing-50 border-[#FFB4C2]'> 
       <div className='flex justify-between items-center gap-x-4'>
-        <h1 className='text-3xl my-8'>Books List</h1>
+        <h1 className='text-3xl text-[#536493] font-mono my-8'>Books List</h1>
         <Link to='/books/create'>
-          <MdOutlineAddBox className='text-sky-800 text-4xl' />
+          <MdOutlineAddBox className='text-[#536493] text-4xl' />
         </Link>
       </div>
       {loading ? <Spinner /> : showType === 'table' ? (<BooksTable books={books} />) : (<BooksCard books={books} />)}
