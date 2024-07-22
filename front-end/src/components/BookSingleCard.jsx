@@ -14,21 +14,21 @@ const BookSingleCard = ({ book }) => {
     return (
         <div
             key={book._id}
-            className='border-2 border-grey-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-xl'
+            className='border-2 bg-[#EF5A6F] border-grey-500 rounded-xl px-4 py-2 m-4 relative hover:shadow-2xl'
         >
-            <h2 className='absolute top-1 right-2 px-4 py-1 bg-red-300 rounded-lg'>
+            <h2 className='absolute top-1 right-2 px-4 py-1 text-[#D4BDAC] font-mono  bg-[#536493] rounded-xl'>
                 {book.publishYear}
-            </h2>
-            <h4 className='my-2 text-gray-500'>{book._id}</h4>
-            <PiBookOpenTextLight className='text-red-300 text-2xl' />
-            <h2 className='my-1'>{book.title}</h2>
+            </h2>   
+            <h4 className='my-2 text-[#FFF8DB] font-light font-mono'>{book._id}</h4>
+            <PiBookOpenTextLight className='text-[#304463] text-2xl' />
+            <h2 className='my-1 text-[#FFF8DB] font-mono'>{book.title}</h2>
             <div className='flex justify-start books-center gap-x-2'>
             </div>
             <div className='flex justify-start books-center gap-x-2'>
-                <BiUserCircle className='text-red-300 text-2xl' />
-                <h2 className='my-1'>{book.author}</h2>
+                <BiUserCircle className='text-[#304463] text-2xl' />
+                <h2 className='my-1 font-mono text-[#FFF8DB]'>{book.author}</h2>
             </div>
-            <div className='flex justify-between books-center gap-x-2 mt-4 p-4'>
+            <div className='flex justify-between bg-[#FFF1DB] books-center gap-x-2 mt-4 p-4 rounded-xl'>
                 <BiShow
                     className='text-3xl text-blue-800 hover:text-black cursor-pointer'
                     onClick={() => setShowModal(true)}
