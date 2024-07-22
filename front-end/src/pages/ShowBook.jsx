@@ -24,7 +24,7 @@ const ShowBook = () => {
       });
   }, []);    
   return (
-    <div className='p-4 justify-center'>
+    <div className='p-4 font-mono min-h-screen justify-center bg-[#FFF1DB]'>
        <BackButton />
        <h1 className='text-3xl mt-4'>Show Book</h1>
        {loading ? (
